@@ -11,7 +11,80 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER 1/INTRODUCTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{introduction_V1.tex}
+\singlespacing
+\chapter{Introduction}
+\label{ch:intro}
+\doublespacing
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+%\fancyhead[LE,RO]{\thepage} %puts page number on top left for even pages, top right for odd pages
+\chead{}
+%\lhead{}
+%\rhead{\thepage}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt} %controls thickness of line underneath header- same for footrulewidth
+\thispagestyle{fancy}
+
+Earthquake is like lightning, each strike lights up the darkness of the earth's interior. For centuries scientists have studied the propagation of seismic waves, the elastic energy released by earthquake, and use them to explore the deep structure and the dynamic processes of the planet that we all live on. 
+
+Among different types of the seismic waves, surface waves draw the attention of many seismologists as the late-arriving phases that usually have the largest amplitude. They are the waves that propagate along the shallow part of the earth, which makes them sensitive to the heterogeneities in the crust and upper mantle.
+Surface waves are dispersed, as different frequencies are sensitive to the structure at different depths, which makes it more challenging to quantitatively describe their propagation. 
+They can be measured by different means, one of the most common methods is to estimate phase velocity, the speed that the phase at each individual frequency varies along the path. 
+The frequency-dependent phase velocities can then be mapped into the shear velocities at depths through a non-linear inversion.
+
+Based on the particle motion direction, surface waves can be separated into Rayleigh waves and Love waves. Although they sample the similar part of the earth, the structures they each suggest sometimes are not consistent. This so-called Love-Rayleigh discrepancy is the most important constrain on the earth's radial anisotropy, which can be interpreted by mantle flow pattern, melt geometry, crystal alignment, etc \citep[e.g.][]{Gaherty:2004is,Gaherty:2007cc,Holtzman:2010fta}.
+
+The estimation of surface-wave phase velocity depends on single-station phase measurements. Several techniques have been developed to estimate surface-wave phase velocities, from utilizing the basic Fourier transform \citep{Forsyth:2005id}, to applying the multi-channel narrow-band filters \citep[e.g.][]{Levshin:1992ve}, to the cross-correlating the waveform with either synthetic waveforms \citep[e.g.][]{Gee:1992ww}, or the waveform from another station on the same great-circle path \citep[e.g.][]{Landisman:1969gt}.
+
+The phase variations at stations can then be inverted for two-dimensional phase-velocity maps. At this stage, several methods are developed under different assumptions. The first catalog of methods is based on straight-ray theory, with the phase observations being presented as integral of phase slowness along source-receiver path \citep[e.g.][]{Nettles:2008ha}, or between two stations on the same great-circle path \citep[e.g.][]{Yao:2005ha,Foster:2014kna}. The second catalog corrects for the ray-bending and finite-frequency effect which can be remarkable for surface waves \citep[e.g.][]{Evernden:1954ui,Zhou:2005fk}. Methods in this catalog include the two-station method with arrival-angle correction \citep{Foster:2014kna}, Eikonal tomography \citep{Lin:2009fx}, and finite-frequency kernel estimation \citep{Zhou:2006gna}. The final catalog of phase-velocity inversion methods utilize the amplitude measurements to reduce the multi-pathing interference, which includes the two-plane-wave method \citep{Forsyth:2005id} and the recently developed Helmholtz tomography \citep{Lin:2011fw}.
+
+The deployments of large and dense arrays become more popular in nowadays seismic experiments. Significant amount of data are collected in real time and open to the public. 
+Among the experiments, the Transportable Array (TA) under the USArray program stands out by its data volume and coverage area. The TA project includes more than 400 board-band seismic sensors deployed with $\sim$70-km grid spacing, spanning from the west coast to east to cover the entire US continent. The communication system installed at the sites allow for the real-time data transportation and publication. Such large and growing dataset is ideal for surface-wave analysis, however an automated system is required to accommodate the speed of data growth.
+
+In Chapter~\ref{ch:aswms}, we develop a new technique to meet the challenge. The Automated Surface-Wave phase-velocity Measuring System (ASWMS) is based on the cross-correlation technique to measure frequency-dependent phase delays between all possible nearby station pairs. 
+During the measurement, coherence among the nearby stations are used to identify low-quality measurements, and hence to automate the whole process. 
+The measured phase delays, together with single-station amplitude measurements, are then inverted for two-dimensional phase-velocity maps at each frequency.
+
+We successfully automate the entire process. By combining with the data-downloading interface from IRIS DMC, we develop a program that can run by itself and update the US Rayleigh-wave phase-velocity results on a weekly basis. The program is adopted by IRIS DMC as a data product, together with the ASWMS packaged for the public to download. 
+
+After the methodology development, we turn our focus into its regional applications. In Chapter~\ref{ch:png}, we apply the surface-wave analysis in the region near the D'Entrecasteaux Islands (DI), Papua New Guinea (PNG).
+
+The DI locate at the tip of the Woodlark rifting system, where the continental rift is actively transforming into sea-floor spreading \citep[e.g.][]{Taylor:1999ur, Ferris:2006tr}. Previous studies show the crust beneath the DI has been thinned by 30-50\%, while the body-wave tomography results suggest a upwelling mantle \citep{Abers:2002uj, Ferris:2006tr}.
+The islands expose high-pressure (HP) terranes comprise several gneiss domes with 20-30km in diameter. These gneiss domes are mostly felsic in composition (quartzofeldspathic), and bears the youngest-know ultrahigh-pressure (UHP) coesite eclogite \citep{Baldwin:2004wx, Baldwin:2008gm, Little:2011jy}. The HP/UHP rocks have a composition similar to continental crust, and the isotropic analysis reveals a exhumation history at a plate-tectonic rate from $\sim$100-km depth since 5-8 Ma \citep{Baldwin:2008gm, Gordon:2012hu}.
+
+The exhumation mechanism of the UHP rocks remains debated, and the two existing competing models are: subduction reversal that extracts UHP rocks along the paleo-subduction channel as a low-angle unroofing process \citep{Hill:1992jd, Webb:2008fc}, or thinning of overlying crust to allow penetration of buoyant continental rocks to the surface as diapirs \citep{Ellis:2011jh, Little:2011jy}.
+
+In order to provide better constrains on the geodynamic process in this area, we deployed 31 land-based and 8 ocean bottom board-band seismometers, with $\sim$20-km station spacing, to cover a $2.5^\circ \times 2.5^\circ$ around the DI. The stations collected seventeen months of data, on which we perform surface-wave analysis to retrieve a three-dimensional shear-velocity model of the region.
+
+To better constrain the shallow structure, we also apply the ambient-noise technique to obtain phase velocities at higher frequencies.
+The idea of using ambient-noise cross correlation to recover the green function between two simultaneously-recording stations can be traced back as early as \citet{Aki:1957un}. 
+It was not until fifty years later that the method became popular because of the availability of dense seismic networks \citep[e.g.][]{Shapiro:2005kz,Bensen:2007hl}. 
+In the PNG case, We perform the ambient-noise measurements in the frequency domain, followed the algorithm developed \citet{Ekstrom:2009iv} and \citet{Ekstrom:2013dr}. 
+We also develop a new Bessel-function waveform fitting technique to better estimate the phase delays between the stations, which are later used to invert for phase-velocity maps using a ray-theory tomography method.
+
+The ambient noise analysis produces high resolution phase-velocity maps at the 10-17~s periods. Together with the earthquake measurements from the ASWMS, we retrieve the robust phase velocities of Rayleigh waves in a wide frequency range (10-60 s in period), which promise good constrains on the crustal and upper mantle structures.
+
+For each grid on the map, the phase-velocity dispersion curve is then extracted to invert the shear-velocity structure independently. This inversion is non-linear and non-unique \citep{Herrmann:2004wl}, and the output is largely dependent on the initial model \citep[e.g.][]{Foti:2009uo}. In order to produce reliable shear-velocity results, we first make effort to build up good initial models. 
+The receiver-function result \citep{Abers:2012ul} is adopted to constrain the crustal thickness. We apply a grid-search through various parameters to find the simple three-layer model that best fits the observation. 
+Then the model is randomly perturbed for 100 times, each serves as an initial model to invert for shear-velocity model. 
+The inverted models are then averaged to obtain the final model, and the shear-velocity variance due to the initial-model dependence are estimated at the same time. 
+The shear-velocity results show a slow anomaly in the shallow mantle west of Goodenough island, suggesting the existence of un-exhumed continental crust material and/or partial melt.
+
+Although we successfully apply our methods on Rayleigh waves, systematic bias is found in the phase-velocity measurements when we apply the same techniques on Love waves. 
+The bias is mainly generated by overtone interference, which needs to be handled with special concern for the Love-wave single-mode measurements \citep[e.g.][]{Thatcher:1969hg,Forsyth:1975tp,Gaherty:1996uf}.
+
+The overtone interference is more acute for Love waves due to the similar group velocities of the fundamental- and higher-mode Love waves, especially for oceanic structures \citep{Nettles:2011bb}. It can produce large phase and amplitude variations for single-branch measurements.  
+Such variations do not significantly affect long-path measurements, since the interference pattern is periodical and the bias can be averaged out over the path \citep{Nettles:2011bb}. But they can introduce large bias in the array-based regional studies which involve the estimation of local phase-gradient. In the USArray application, \citet{Foster:2014kr} show that the bias due to the interference is still profound at middle-band frequencies (60-150~s), even the array locates in the center of the continent and only shallow events are selected. 
+
+Based on the global and regional observation, \citet{Nettles:2011bb} and \citet{Foster:2014kr} suggest the bias is mainly controlled by the interference between the Love-wave fundamental mode and its first overtone, which can be simplified and modeled.
+
+In Chapter~\ref{ch:overtone} we construct a series of synthetic tests to simulate the pattern of overtone interference and its influence on the single-branch phase-velocity measurements. We also develop a correction technique that has the potential to correct this bias.
+
+The target of this dissertation to develop new techniques to retrieve earth's structure from surface waves, so we can better understand the regional geodynamic processes. We develop robust and automatic phase-velocity measuring methods for both earthquake and ambient-noise based data, and successfully apply them on the data from USArray and a PASSCAL temporary array at the D'Entrecasteaux Islands, Papua New Guinea. We also propose a correction scheme that can reduce the phase-velocity bias due to overtone interference in Love-wave studies.
+
+\raggedbottom
+\pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER 2/FIRST PAPER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -32,5 +105,43 @@ $^a$ Lamont-Doherty Earth Observatory, Columbia University, 61 Route 9W, Palisad
 \end{raggedright}
 %\linenumbers
 \normalsize
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter 3 PNG
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\singlespacing
+\chapter[Shear velocity structure of the DI, PNG]{Shear Velocity Structure of the D'Entrecasteaux Islands, Papua New Guinea from Rayleigh Wave Tomography}
+\label{ch:png}
+\doublespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter 4 overtone %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\singlespacing
+\chapter[Overtone]{overtone}
+\label{ch:overtone}
+\doublespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter 5 conclusion %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\singlespacing
+\chapter[Conclusion]{Concluding Remarks}
+\label{ch:conclusion}
+\doublespacing
+
+In this dissertation, we develop several new surface-wave measuring methods and apply them on different datasets to understand local tectonic structures.
+
+In Chapter~\ref{ch:aswms}, we develop the Automated Surface-Wave Measuring System (ASWMS), which can retrieve surface-wave phase velocities from dense-array data without human intervention. We produce robust Rayleigh-wave phase-velocity maps of the US continent at the periods of 20-100s using the USArray data, and work with IRIS to provide weekly-updated results for general public. The phase-velocity maps clearly outline the major geological structures in the US continent. The spectrum analysis of these maps imply that in the upper mantle, thermal variation affects shear velocity more than compositional variations.
+
+In Chapter~\ref{ch:png}, we apply surface-wave analysis in the region near the D'Entrecasteaux Islands, Papua New Guinea. We retrieve phase-velocity variations using both ambient-noise and earthquake signal. The phase velocities in a board period range (10-60 s) are inverted for the shear-velocity structure in the crust and the upper mantle. The results imply the existence of un-exhumed crustal material and/or partial melt in the shallow mantle west of the most recently exhumed Goodenough Island.
+
+In Chapter~\ref{ch:overtone}, we focus on the effect of Love-wave overtone interference on the array-based phase-velocity measurements. We simulate the interference pattern by two plane waves travelling together at different phase velocities. We also develop a correction scheme that can significantly reduce the phase-velocity bias and variance due to the interference. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\cleardoublepage
+\normalsize
+\singlespacing
+\bibliographystyle{elsarticle-harv}
+\addcontentsline{toc}{chapter}{References}
+\bibliography{thesis_ref}
+\clearpage
 
 \end{document}  
