@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{titlepage}
 \singlespacing
-\title{Surface-wave analysis and its application on regional arrays}
+\title{Surface-wave analysis and its application to determining crustal and mantle structure beneath regional arrays}
 \author{Ge Jin\\
 \vspace{272pt}\\
 Submitted in partial fulfillment \\
@@ -30,24 +30,27 @@ All rights reserved}
 \doublespacing
 \large
 {\bf ABSTRACT}\\
-Surface-wave analysis and its application on regional arrays
+Surface-wave analysis and its application to determining crustal and mantle structure beneath regional arrays
 
 Ge Jin
 \end{center}
 \doublespacing
 
-We develop several new techniques to better retrieve earth's structure by analyzing surface waves. These techniques are applied in the regional studies to understand the tectonic structures and geodynamic processes.
+We develop several new techniques to better retrieve Earth's structure by analyzing seismic surface waves. These techniques are applied in regional studies to understand a variety of tectonic structures and geodynamic processes in Earth's crust and upper mantle.
 
 We create an automated method to retrieve surface-wave phase velocities using dense seismic arrays. The method is based on the notion of using cross-correlation to measure phase variations between nearby stations. Frequency-dependent apparent phase velocities are inverted from the phase-variation measurements via the Eikonal equation. The multi-pathing interference is corrected using amplitude measurements via the Helmholtz equation. The coherence between nearby-station waveforms, together with other data-selection criteria, helps to automate the entire process. We build up the Automated Surface-Wave Measuring System (ASWMS) that retrieves structural phase velocity directly from raw seismic waveforms for individual earthquakes without human intervention. 
-This system is applied on the broad-band seismic data recorded by the USArray from 2006-2014, and obtain Rayleigh-wave phase-velocity maps at the periods of 20-100~s. The high-frequency maps correlate well with the ambient-noise results. At all frequencies, a significant contrast in Rayleigh-wave phase velocity between the tectonically active western US and the stable eastern US can be observed, with the phase-velocity variations in the western US being 1-2 times greater.
+This system is applied on the broad-band seismic data recorded by the USArray from 2006-2014, and obtain Rayleigh-wave phase-velocity maps at the periods of 20-100~s. 
+In total around half million seismograms from 850 events are processed, generating about 4 million cross-correlation measurements.
+The maps correlate well with several published studies, including ambient-noise results at high frequency. At all frequencies, a significant contrast in Rayleigh-wave phase velocity between the tectonically active western US and the stable eastern US can be observed, with the phase-velocity variations in the western US being 1-2 times greater.
 The Love wave phase-velocity maps are also calculated. We find that overtone interference may produce systematic bias for the Love-wave phase-velocity measurements.
 
-We apply surface-wave analysis on the data collected by a PASSCAL array near the D'Entrecasteaux Island (DI), Papua New Guinea. The array comprises 31 inland and 8 off-shore broad-band seismic sensors, and were operated from March 2010 to July 2011. 
-We adopt the ASWMS to retrieve phase velocities from earthquake signals, and apply the ambient-noise analysis to obtain the Rayleigh-wave phase velocities at high frequencies. The multi-band phase velocities are inverted for a three-dimensional shear-velocity model of the crust and the upper mantle. The result reveals a localized lithosphere extension along the rift axis beneath the DI, with a shear-velocity structure similar to an adiabatic-upwelling mantle. West of the DI, slow shear-velocity anomaly can be observed at shallow mantle depth (30-60~km), which we interpret either as the present of extra partial melt due to the slow melt extraction, or as the existence of un-exhumed felsic crustal material mixing with the surrounding mantle.
+We apply surface-wave analysis on the data collected by a temporary broad-band seismic array near the D'Entrecasteaux Island (DI), Papua New Guinea. The array comprises 31 inland and 8 off-shore broad-band seismic sensors, and were operated from March 2010 to July 2011. 
+We adopt the ASWMS to retrieve phase velocities from earthquake signals, and apply the ambient-noise analysis to obtain the Rayleigh-wave phase velocities at higher frequencies. The multi-band phase velocities are inverted for a three-dimensional shear-velocity model of the crust and the upper mantle. The result reveals localized lithosphere extension along a rift-like axis beneath the DI, with a shear-velocity structure similar to an adiabatic upwelling mantle. West of the DI, slow shear-velocity anomaly can be observed at shallow mantle depth (30-60~km), which we interpret either as the presence of in situ partial melt due to inhibited melt extraction, or as the existence of un-exhumed felsic crustal material embedded  within the surrounding mantle.
 
-Love waves contain important information to constrain the upper-mantle radial anisotropy. However, Love-wave fundamental-mode phase-velocity measurements are usually contaminated by overtone interference.
-We simulate the interference pattern using two plane waves traveling together at different phase velocities. The results indicate large phase variance due to the interference and explain the systemic bias observed in the real data. 
-A correction scheme is developed that utilizes amplitude measurements to correct for the interference effect. The synthetic tests show the correction can significantly reduce the phase-velocity variance and the bias generated by the interference.
+Love waves contain important information to constrain the upper-mantle radial anisotropy. However, Love-wave fundamental-mode phase-velocity measurements are often contaminated by overtone interference, especially within regional-scale arrays.
+We evaluate this problem by analytically and numerically evaluating the behavior of synthetic wavefields consisting of two interfering plane waves with distinct phase velocities but comparable group velocities.
+The results indicate large phase variance due to the interference that can explain the systemic bias observed in data. 
+We develop a procedure that utilizes amplitude measurements to correct for the interference effect. The synthetic tests show the correction can significantly reduce the phase-velocity variance and the bias generated by the interference.
 
 \raggedbottom
 \pagebreak
@@ -89,6 +92,14 @@ A correction scheme is developed that utilizes amplitude measurements to correct
 \addcontentsline{toc}{chapter}{Acknowledgments}
 {\fontsize{11}{14}
 \selectfont
+
+I always appreciate the fortune to be able to spend my last five years at Lamont-Doherty Earth Observatory. This has been the best five years in my life: learning from the top scientists in the field, making friends and collaborating with the excellent fellow students from all over the world, enjoying the abundant education resources from Columbia University... From an imprudent Chinese student who spoke broken English, to a young scientist who finds the field he loves, I have grown at a speed that even surprises myself. 
+
+Special thanks to my advisor Professor James Gaherty, who is a great mentor with patience and an outstanding scientist with keen sense. For years you inspire me when I am confused, guide me when I am lost, remind me when I do wrong, and praise me when I improve. You lead me to enjoy the fun of exploring the unknown, support me to find my own interest, and teach me how to be a scientist. I cannot express all my appreciations to you. I also thanks my other committee members, Professor Geoff Abers and Professor Roger Buck. Geoff teaches me the importance of meticulosity, and provides many helpful suggestions on my projects. Roger helps me to build up the systematic understanding of geodynamic process, and instructs me how to extract the key factors from a complicated system. Thank you. I would like to express my gratitude to my other defense committee members: Dr. Ben Holtzman and Professor Colleen Dalton. Ben opens a new artistic world to me in seismology, and helps me to build up the link between seismic observations and rock mechanisms. Colleen gives many helps and comments in our methodology development, and provides me the opportunities of collaboration.  Many thanks to G\"oran Ekstr\"om for your patient instructions and insightful comments, to Meredith Nettles for your great suggestions,  to Bill Menke for your brilliant ideas, to Philipp Ruprecht for your accompany and instructions in the field. Thank you to Felix Waldhauser, Paul Richards, Spahr Webb, Mark Anders, Won-Young Kim, Einat Aharonov, and all the other staffs at Lamont who helped me to learn. Many thanks to Patty Lin, YoungHee Kim and Mathias Obrebski, whom I have the great pleasure to work with. 
+
+I am thankful for my fellow students: Yang Zha, Zach Eilon, Raj Moulik, Anna Foster,  Jiyao Li, Natalie Accardo, John Templeton, Claire Bendersky, Mike Howe, Steve Veitch, Celia Eddy, Hannah Robinowitz, Helen Janiszewski, Kira Olsen, and many others... Thank you for the accompany in this challenging journey, the courage and comforts you give,  the help in organizing the student workshop, the discussions we learn from each other, the trips we travel together, the parties we all have fun... Thank you all.
+
+Finally, I would like to extend my deepest gratitude to my family. To my wife, who knows me from childhood, thank you for the years of love and support and understanding. You make me a better person, I cannot image a life without you. Thank you to my parents, for your unconditional love and support. You make me who I am, and I hope I can make you proud.
 
 \pagebreak
 
